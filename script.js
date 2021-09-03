@@ -15,6 +15,7 @@ function getRandomValue(){
     return values[Math.floor(Math.random()*values.length)];
 }
 function add(){
+    document.getElementById("display").innerHTML=" "; 
     if(bool===true){
     inter=setInterval(() => {
     a.innerText=getRandomValue();

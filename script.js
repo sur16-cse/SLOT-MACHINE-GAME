@@ -9,15 +9,20 @@ let values=[
 ];
 
 var inter;
+var bool=true;
 
 function getRandomValue(){
     return values[Math.floor(Math.random()*values.length)];
 }
-function add(){inter=setInterval(() => {
+function add(){
+    if(bool===true){
+    inter=setInterval(() => {
     a.innerText=getRandomValue();
     b.innerText=getRandomValue();
     c.innerText=getRandomValue();
 }, 200);
+bool=false;
+    }
 }
 
 
@@ -32,7 +37,8 @@ remove=()=> {
     {
         document.getElementById("display").innerHTML="YOU LOSE"
     }
-   }, 1000);   
+   }, 1000); 
+        bool=true;
 }
 
 
